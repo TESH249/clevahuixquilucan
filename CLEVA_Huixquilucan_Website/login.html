@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CLEVA Huixquilucan - Iniciar Sesión</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo-nav">
+      <h1>CLEVA <span>Huixquilucan</span></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Tratamientos</a></li>
+          <li><a href="#">Dentistas</a></li>
+          <li><a href="login.html">Iniciar Sesión</a></li>
+          <li><a href="agendar-cita.html">Agendar Cita</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="login-section">
+      <div class="login-card">
+        <h2>Iniciar Sesión</h2>
+        <!-- Botón oficial de Google -->
+        <div id="g_id_onload"
+             data-client_id="449615619408-p8b0rgriusolkp4ktfr8i2j1lqr3rkaf.apps.googleusercontent.com"
+             data-callback="handleCredentialResponse"
+             data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin"
+             data-type="standard"
+             data-shape="rectangular"
+             data-theme="outline"
+             data-text="sign_in_with"
+             data-size="large"
+             data-logo_alignment="left">
+        </div>
+        <button class="dentist-btn" id="dentist-login">Cuenta de Dentista</button>
+        <div id="dentist-form" style="display:none;">
+          <input type="email" placeholder="Correo del dentista" id="dentist-email">
+          <input type="password" placeholder="Contraseña" id="dentist-password">
+          <button class="dentist-submit-btn" id="dentist-submit">Iniciar Sesión</button>
+        </div>
+        <p>¿No tienes cuenta? <a href="#" id="show-register">Crear una nueva cuenta</a></p>
+        <div id="register-form" style="display:none;">
+          <input type="text" placeholder="Nombre" id="register-name">
+          <input type="email" placeholder="Correo" id="register-email">
+          <input type="password" placeholder="Contraseña" id="register-password">
+          <button class="register-btn" id="register-submit">Registrarse</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    function handleCredentialResponse(response) {
+      // Aquí puedes enviar el token a tu backend si lo necesitas
+      localStorage.setItem('isLoggedIn', 'true');
+      window.location.href = 'citas.html';
+    }
+    document.getElementById('dentist-login').addEventListener('click', function() {
+      document.getElementById('dentist-form').style.display = 'block';
+    });
+    document.getElementById('dentist-submit').addEventListener('click', function() {
+      const email = document.getElementById('dentist-email').value;
+      const password = document.getElementById('dentist-password').value;
+      if (email && password) {
+        localStorage.setItem('isLoggedIn', 'true');
+        window.location.href = 'citas.html';
+      } else {
+        alert('Por favor, ingresa correo y contraseña.');
+      }
+    });
+    document.getElementById('show-register').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('register-form').style.display = 'block';
+    });
+    document.getElementById('register-submit').addEventListener('click', function() {
+      alert('Cuenta creada. Redirigiendo a citas...');
+      localStorage.setItem('isLoggedIn', 'true');
+      window.location.href = 'citas.html';
+    });
+  </script>
+</body>
+</html> 

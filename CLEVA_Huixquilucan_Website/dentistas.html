@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dentistas - CLEVA Huixquilucan</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .dentistas-section {
+      padding: 40px 0 60px 0;
+      text-align: center;
+      background: #fff;
+    }
+    .dentistas-section h2 {
+      color: #3ec6e0;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .dentistas-section p.subtitle {
+      color: #222;
+      font-size: 1.2rem;
+      margin-bottom: 36px;
+    }
+    .dentistas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    .dentista-card {
+      background: #f9faff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(62,198,224,0.10);
+      padding: 32px 24px 24px 24px;
+      max-width: 300px;
+      width: 100%;
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .dentista-card:hover {
+      box-shadow: 0 8px 32px rgba(62,198,224,0.18);
+    }
+    .dentista-foto {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #3ec6e0;
+      margin-bottom: 18px;
+      background: #fff;
+    }
+    .dentista-nombre {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0288d1;
+      margin-bottom: 6px;
+    }
+    .dentista-especialidad {
+      color: #e040fb;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .dentista-desc {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 900px) {
+      .dentistas-grid {
+        gap: 24px;
+      }
+    }
+    @media (max-width: 600px) {
+      .dentistas-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-nav">
+      <h1>CLEVA <span>Huixquilucan</span></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Nosotros</a>
+            <ul class="dropdown-menu">
+              <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+              <li><a href="instalaciones.html">Instalaciones</a></li>
+              <li><a href="nuestros-doctores.html">Nuestros Doctores</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Tratamientos</a>
+            <ul class="dropdown-menu">
+              <li><a href="diseno-sonrisa.html">Diseño de Sonrisa</a></li>
+              <li><a href="implantologia.html">Implantología</a></li>
+              <li><a href="protesis-bucales.html">Prótesis Bucales</a></li>
+              <li><a href="odontopediatria.html">Odontopediatría</a></li>
+              <li><a href="cirugia-maxilofacial.html">Cirugía Maxilofacial</a></li>
+              <li><a href="endodoncia.html">Endodoncia</a></li>
+              <li><a href="periodoncia.html">Periodoncia</a></li>
+            </ul>
+          </li>
+          <li><a href="dentistas.html">Dentistas</a></li>
+          <li><a href="login.html">Iniciar Sesión</a></li>
+          <li><a href="agendar-cita.html">Agendar Cita</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="dentistas-section">
+      <h2>Nuestro Equipo</h2>
+      <p class="subtitle">Dentistas de Primera.<br>En CLEVA Huixquilucan disponemos de un equipo profesional de dentistas altamente calificados, comprometidos en ofrecerte un servicio de calidad con tecnología de avanzada.</p>
+      <div class="dentistas-grid">
+        <div class="dentista-card">
+          <img class="dentista-foto" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Juan Pérez">
+          <div class="dentista-nombre">Dr. Juan Pérez</div>
+          <div class="dentista-especialidad">Especialista en Implantología</div>
+          <div class="dentista-desc">Más de 15 años de experiencia en implantes dentales y rehabilitación oral.</div>
+        </div>
+        <div class="dentista-card">
+          <img class="dentista-foto" src="https://randomuser.me/api/portraits/men/45.jpg" alt="Dr. Carlos Rodríguez">
+          <div class="dentista-nombre">Dr. Carlos Rodríguez</div>
+          <div class="dentista-especialidad">Cirugía Maxilofacial</div>
+          <div class="dentista-desc">Especialista en cirugía oral y maxilofacial, atención a casos complejos.</div>
+        </div>
+        <div class="dentista-card">
+          <img class="dentista-foto" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dra. María López">
+          <div class="dentista-nombre">Dra. María López</div>
+          <div class="dentista-especialidad">Odontopediatría</div>
+          <div class="dentista-desc">Atención especializada para niños y adolescentes, prevención y educación.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html> 

@@ -1,0 +1,453 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f9faff;
+  color: #333;
+}
+header {
+  background: #e0f7fa;
+  padding: 10px 20px;
+}
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+.logo-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-nav h1 {
+  color: #00796b;
+}
+.logo-nav h1 span {
+  color: #0288d1;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #00796b;
+}
+.contact-info, .calendar-section {
+  padding: 20px;
+}
+.timeslots button {
+  margin: 5px;
+  padding: 8px 12px;
+  background-color: #b2dfdb;
+  border: none;
+  cursor: pointer;
+}
+
+/* Banner de inicio */
+.inicio-banner {
+  background: linear-gradient(90deg, #3ed6e0 0%, #3ec6e0 100%);
+  color: #fff;
+  padding: 40px 0 20px 0;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  margin-bottom: 24px;
+}
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.banner-text {
+  max-width: 350px;
+  text-align: left;
+}
+.banner-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.banner-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.banner-btn {
+  background: #fff;
+  color: #3ec6e0;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+.banner-btn:hover {
+  background: #3ec6e0;
+  color: #fff;
+}
+.banner-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.abierto-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 32px 40px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-7deg);
+  border-bottom: 8px solid #e040fb;
+  border-top: 4px solid #3ec6e0;
+}
+.abierto-icon {
+  font-size: 56px;
+  color: #3ec6e0;
+  margin-bottom: 8px;
+}
+.abierto-text {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #e040fb;
+  letter-spacing: 2px;
+}
+.banner-maps {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .banner-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .banner-img {
+    margin-top: 12px;
+  }
+}
+
+/* Agendar Cita - Estilos llamativos */
+.agendar-cita-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 400px;
+  padding: 40px 0;
+  background: linear-gradient(90deg, #e0f7fa 0%, #f9faff 100%);
+}
+.agendar-cita-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(62,198,224,0.13);
+  padding: 36px 40px 32px 40px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  border-top: 6px solid #3ec6e0;
+  border-bottom: 6px solid #e040fb;
+}
+.agendar-cita-card h2 {
+  color: #3ec6e0;
+  font-size: 2rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+.agendar-cita-card label {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+.agendar-cita-card input[type="date"] {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #b2dfdb;
+  font-size: 1rem;
+  margin: 12px 0 18px 0;
+  outline: none;
+  transition: border 0.2s;
+}
+.agendar-cita-card input[type="date"]:focus {
+  border: 1.5px solid #3ec6e0;
+}
+.agendar-cita-card .timeslots {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.agendar-cita-card .timeslots button {
+  background: #3ec6e0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(62,198,224,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+.agendar-cita-card .timeslots button:hover {
+  background: #e040fb;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .agendar-cita-card {
+    padding: 18px 8px 18px 8px;
+    max-width: 98vw;
+  }
+}
+
+/* Contacto - Estilos llamativos */
+.contacto-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 300px;
+  padding: 40px 0;
+  background: linear-gradient(90deg, #e0f7fa 0%, #f9faff 100%);
+}
+.contacto-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(62,198,224,0.13);
+  padding: 32px 40px 28px 40px;
+  max-width: 520px;
+  width: 100%;
+  text-align: left;
+  border-top: 6px solid #3ec6e0;
+  border-bottom: 6px solid #e040fb;
+}
+.contacto-top-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.05em;
+  margin-bottom: 18px;
+  color: #333;
+}
+.contacto-info h2 {
+  color: #3ec6e0;
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.contacto-info p {
+  font-size: 1.1rem;
+  color: #222;
+}
+@media (max-width: 600px) {
+  .contacto-card {
+    padding: 18px 8px 18px 8px;
+    max-width: 98vw;
+  }
+  .contacto-top-bar {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1em;
+  }
+}
+
+/* Login - Estilos llamativos */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 40px 0;
+  background: linear-gradient(90deg, #e0f7fa 0%, #f9faff 100%);
+}
+.login-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(62,198,224,0.13);
+  padding: 36px 40px 32px 40px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  border-top: 6px solid #3ec6e0;
+  border-bottom: 6px solid #e040fb;
+}
+.login-card h2 {
+  color: #3ec6e0;
+  font-size: 2rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+.google-btn {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: 12px;
+}
+.google-btn:hover {
+  background: #f1f1f1;
+  color: #3ec6e0;
+}
+.login-card p {
+  font-size: 1rem;
+  color: #333;
+}
+.login-card a {
+  color: #3ec6e0;
+  text-decoration: none;
+  font-weight: 500;
+}
+.login-card a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .login-card {
+    padding: 18px 8px 18px 8px;
+    max-width: 98vw;
+  }
+}
+
+/* Botón de dentista */
+.dentist-btn {
+  background: #e040fb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(224,64,251,0.10);
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: 12px;
+}
+.dentist-btn:hover {
+  background: #d500f9;
+  color: #fff;
+}
+/* Formulario de registro */
+#register-form {
+  margin-top: 18px;
+  text-align: left;
+}
+#register-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.register-btn {
+  background: #3ec6e0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(62,198,224,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+.register-btn:hover {
+  background: #0288d1;
+  color: #fff;
+}
+
+/* Citas Agendadas - Estilos llamativos */
+.citas-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 400px;
+  padding: 40px 0;
+  background: linear-gradient(90deg, #e0f7fa 0%, #f9faff 100%);
+}
+.citas-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(62,198,224,0.13);
+  padding: 36px 40px 32px 40px;
+  max-width: 520px;
+  width: 100%;
+  text-align: left;
+  border-top: 6px solid #3ec6e0;
+  border-bottom: 6px solid #e040fb;
+}
+.citas-card h2 {
+  color: #3ec6e0;
+  font-size: 2rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+.citas-list {
+  list-style: none;
+  padding: 0;
+}
+.citas-list li {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  color: #333;
+}
+.citas-list li:last-child {
+  border-bottom: none;
+}
+@media (max-width: 600px) {
+  .citas-card {
+    padding: 18px 8px 18px 8px;
+    max-width: 98vw;
+  }
+}
+
+/* Menú desplegable para 'Nosotros' */
+nav ul li.dropdown {
+  position: relative;
+}
+nav ul li .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #232b39;
+  min-width: 200px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  border-radius: 0 0 8px 8px;
+  z-index: 100;
+  padding: 0;
+}
+nav ul li .dropdown-menu li {
+  border-bottom: 1px solid #3a4252;
+}
+nav ul li .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+nav ul li .dropdown-menu a {
+  color: #fff;
+  padding: 16px 24px;
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+nav ul li .dropdown-menu a:hover {
+  background: #2e3748;
+}
+nav ul li.dropdown:hover .dropdown-menu {
+  display: block;
+}

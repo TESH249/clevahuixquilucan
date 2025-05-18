@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CLEVA Huixquilucan - Agendar Cita</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/calendar.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo-nav">
+      <h1>CLEVA <span>Huixquilucan</span></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Tratamientos</a></li>
+          <li><a href="#">Dentistas</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+          <li><a href="agendar-cita.html">Agendar Cita</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="agendar-cita-section">
+      <div class="agendar-cita-card">
+        <h2>Agendar Cita</h2>
+        <label for="appointment-date"><strong>Selecciona una fecha:</strong></label>
+        <input type="date" id="appointment-date">
+        <div class="timeslots" id="timeslots"></div>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      if (!isLoggedIn) {
+        window.location.href = 'login.html';
+      }
+    });
+  </script>
+</body>
+</html> 

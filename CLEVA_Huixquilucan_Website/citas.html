@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CLEVA Huixquilucan - Citas Agendadas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-nav">
+      <h1>CLEVA <span>Huixquilucan</span></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Tratamientos</a></li>
+          <li><a href="#">Dentistas</a></li>
+          <li><a href="login.html">Iniciar Sesión</a></li>
+          <li><a href="agendar-cita.html">Agendar Cita</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="citas-section">
+      <div class="citas-card">
+        <h2>Citas Agendadas</h2>
+        <ul class="citas-list">
+          <li>
+            <strong>Fecha:</strong> 15/06/2023<br>
+            <strong>Hora:</strong> 10:00<br>
+            <strong>Paciente:</strong> Juan Pérez
+          </li>
+          <li>
+            <strong>Fecha:</strong> 16/06/2023<br>
+            <strong>Hora:</strong> 14:30<br>
+            <strong>Paciente:</strong> María López
+          </li>
+          <li>
+            <strong>Fecha:</strong> 17/06/2023<br>
+            <strong>Hora:</strong> 11:15<br>
+            <strong>Paciente:</strong> Carlos Rodríguez
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      if (!isLoggedIn) {
+        window.location.href = 'login.html';
+      }
+      // Ordenar citas por fecha y hora (simulado)
+      const citas = [
+        { fecha: '15/06/2023', hora: '10:00', paciente: 'Juan Pérez' },
+        { fecha: '16/06/2023', hora: '14:30', paciente: 'María López' },
+        { fecha: '17/06/2023', hora: '11:15', paciente: 'Carlos Rodríguez' }
+      ];
+      citas.sort((a, b) => {
+        const fechaA = new Date(a.fecha.split('/').reverse().join('-') + 'T' + a.hora);
+        const fechaB = new Date(b.fecha.split('/').reverse().join('-') + 'T' + b.hora);
+        return fechaA - fechaB;
+      });
+      const citasList = document.querySelector('.citas-list');
+      citasList.innerHTML = citas.map(cita => `
+        <li>
+          <strong>Fecha:</strong> ${cita.fecha}<br>
+          <strong>Hora:</strong> ${cita.hora}<br>
+          <strong>Paciente:</strong> ${cita.paciente}
+        </li>
+      `).join('');
+    });
+  </script>
+</body>
+</html> 
